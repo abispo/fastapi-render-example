@@ -1,0 +1,10 @@
+services:
+  - type: web
+    runtime: docker
+    name: fastapi_render_example
+    repo: https://github.com/abispo/fastapi-render-example
+    region: oregon
+    plan: free
+    branch: main
+    autoDeploy: true
+    dockerCommand: "uvicorn app.main:app --host 0.0.0.0 --port 80 --reload"
